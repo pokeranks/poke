@@ -27,6 +27,100 @@
 
     <title>PokémonGO Rankings</title>
 
+    <meta name="viewport" content="target-densitydpi=device-dpi,user-scalable=1,minimum-scale=1,maximum-scale=2.5,initial-scale=1,width=device-width"><link href='/static/spreadsheets2/client/css/2609679690-waffle_k_ltr.css' type='text/css' rel='stylesheet'><style type="text/css" nonce="UPr/YD96JEp8Go8xV4GvPWF5RoU">
+        html { overflow: visible; }
+        #sheets-viewport { overflow: auto; }
+        #sheets-viewport.widget-viewport { overflow: hidden; }
+        .grid-container { overflow: visible; background: white;}
+        .grid-table-container { overflow: visible; }
+        #top-bar {
+          background: url("//ssl.gstatic.com/docs/spreadsheets/publishheader.png") repeat-x bottom;
+          margin: 0;
+          overflow: hidden;
+        }
+        #top-bar {
+          border-bottom: 1px solid #ccc;
+          padding: 6px 6px 0;
+        }
+        #doc-title { padding-bottom: 5px; }
+        #doc-title .name { font-size: 15px; }
+        #sheet-menu {
+          font-size: 13px;
+          margin: 6px 0 0;
+          padding: 0 0 5px;
+        }
+        #sheet-menu li {
+          display: inline;
+          list-style-type: none;
+          margin: 0;
+          padding: 5px 8px;
+        }
+        #sheet-menu li.active {
+          background-color: #fff;
+          font-weight: bold;
+          border: 1px solid #999;
+        }
+        #top-bar #sheet-menu li.active {
+          border-bottom: 0;
+        }
+        #sheet-menu a, #sheet-menu a:visited { color: #07c; }
+        #footer {
+          background: #f0f0f0;
+          border-top: 1px #ccc solid;
+          border-bottom: 1px #ccc solid;
+          font-size: 13;
+          padding: 10px 10px;
+        }
+        .dash {
+          padding: 0 6px;
+        }
+        .ritz .waffle a { color: inherit; }.ritz .waffle .s7{border-bottom:1px DASHED #ffffff;border-right:1px DASHED #ffffff;background-color:#f4cccc;text-align:center;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0;}.ritz .waffle .s0{border-bottom:1px DASHED #ffffff;border-right:1px DASHED #ffffff;background-color:#ff9900;text-align:center;font-weight:bold;color:#f3f3f3;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s1{border-bottom:1px DASHED #ffffff;border-right:1px DASHED #ffffff;background-color:#ff9900;text-align:center;font-weight:bold;color:#ffffff;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s3{border-bottom:1px DASHED #ffffff;border-right:1px DASHED #ffffff;background-color:#fff2cc;text-align:center;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0;}.ritz .waffle .s6{border-bottom:1px DASHED #ffffff;border-right:1px DASHED #ffffff;background-color:#f4cccc;text-align:center;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s5{border-bottom:1px DASHED #ffffff;border-right:1px DASHED #ffffff;background-color:#c9daf8;text-align:center;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:0;}.ritz .waffle .s2{border-bottom:1px DASHED #ffffff;border-right:1px DASHED #ffffff;background-color:#fff2cc;text-align:center;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s4{border-bottom:1px DASHED #ffffff;border-right:1px DASHED #ffffff;background-color:#c9daf8;text-align:center;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}</style><script type="text/javascript" nonce="UPr/YD96JEp8Go8xV4GvPWF5RoU">
+        var activeSheetId;
+
+        function switchToSheet(id) {
+          if (document.getElementById('sheet-menu')) {
+            document.getElementById('sheet-button-' + activeSheetId)
+                .className = '';
+            document.getElementById('sheet-button-' + id).className = 'active';
+          }
+
+          document.getElementById(activeSheetId).style.display = 'none';
+          document.getElementById(id).style.display = '';
+          activeSheetId = id;
+
+          // posObjs() is defined in embeddedObjectJs (see EmbeddedObjectHtmlBuilder.java)
+          posObjs();
+          return false;
+        }
+        
+        function init() {
+        var optPageSwitcher;
+        
+        function resize() {
+          var optMobileWebHeader = document.getElementById('docs-ml-header-id');
+          var optTopBar = document.getElementById('top-bar');
+          var optFooter = document.getElementById('footer');
+          var sheetsViewport = document.getElementById('sheets-viewport');
+
+          if (optMobileWebHeader) {
+            sheetsViewport.style.marginTop = optMobileWebHeader.offsetHeight +
+                (optTopBar ? optTopBar.offsetHeight : 0) + 'px';
+          }
+          var adjustedHeight = window.innerHeight -
+              (optTopBar ? optTopBar.offsetHeight : 0) -
+              (optFooter ? optFooter.offsetHeight : 0);
+          var adjustedWidth = window.innerWidth;
+          sheetsViewport.style.width = (adjustedWidth + 'px');
+          sheetsViewport.style.height = (adjustedHeight + 'px');
+          if (optPageSwitcher) {
+            optPageSwitcher.resize(adjustedWidth, adjustedHeight);
+          }
+        }
+        resize();
+        window.onresize = resize;
+        }
+        </script><script nonce="UPr/YD96JEp8Go8xV4GvPWF5RoU">_docs_flag_initialData={"docs-mwid":true,"docs-smheo":true,"info_params":{"token":"AC4w5ViNMXTGSQP78WO9MGl8uqVs4qi0pg:1514725862281","includes_info_params":true},"ilcm":{"eui":"ADFN-cvBMBG9B9iVohY-PehHOcg6Mv9z36IGdqUdC34MEd3Pum7W4scZlRmD8JyY1if9CEUjJPZY","je":1,"sstu":1514725862304000,"si":"CIDS0ceptNgCFYw2JAoduXoJoA","ei":[5701439,5700893,5703006,5701753,5700990,5701602,5701969,5702195,5700588,5700035,5700422,5701853,5700559,5700250,5701172,5702082,5702011,5700333,5701319,5701844,5700446,5700658,5700998,5700684,5701536,5700057,5700286,5700680,5700933,5701378,5701532,5701911,5700592,5701075,5702187,5702877,5701180,5701935,5701014,5700127,5700042,5700796,5700962,5700138,5700716,5701067,5701220,5702654,5701022,5700876,5700808,5701232,5700019,5700016,5702352,5700378,5700937,5701804,5702332,5700103,5701127,5702278,5702556,5700608,5701356,5701516,5701687,5701200,5702803,5702301,5700028,5700105,5701626,5700213,5701352,5702135,5701915,5700650,5701711,5701500,5701731,5701558,5702712,5702706,5701433,5702634,5700551,5700752,5700567,5700579,5701445,5701695,5701719,5701820,5700668,5701300,5701889,5701594,5702023,5702027,5700386,5700994,5700100,5700982,5701463,5700358,5701870,5700410,5701995,5701963]},"drive_url":"//drive.google.com?authuser\u003d0\u0026usp\u003dsheets_web","docs-sup":"/spreadsheets"}; _docs_flag_cek= null ;</script></head><script nonce="UPr/YD96JEp8Go8xV4GvPWF5RoU">document.addEventListener('DOMContentLoaded', init);</script>
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -75,6 +169,7 @@
       </div>
     </nav>
 
+
     <!-- Page Content -->
     <div class="container">
       <div class="row">
@@ -91,10 +186,6 @@
         </div>
       </div>
     </div>
-
-    <footer class="fixed-bottom">
-
-    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
